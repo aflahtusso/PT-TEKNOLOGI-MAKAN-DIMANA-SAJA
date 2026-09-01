@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Teknologi Makan Dimana Saja - Food Tech & Delivery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { scroll-behavior: smooth; }
+        .hero-bg {
+            background: radial-gradient(ellipse at top left, #4c1d95 0%, #1e1b4b 50%, #0f172a 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        .card-img {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .food-card:hover .card-img {
+            transform: scale(1.05);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #a78bfa, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(167, 139, 250, 0.5);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-200 bg-slate-950">
+
+    <!-- Header / Navigasi -->
+    <header class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-violet-500 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg neon-glow">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-extrabold text-white leading-tight">MAKAN <span class="text-lime-400">DIMANA SAJA</span></h1>
+                    <p class="text-xs text-gray-400 tracking-widest">PT Teknologi Makan Dimana Saja</p>
+                </div>
+            </a>
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-gray-300">
+                <a href="#beranda" class="hover:text-lime-400 transition">Beranda</a>
+                <a href="#fitur" class="hover:text-lime-400 transition">Fitur</a>
+                <a href="#cara-kerja" class="hover:text-lime-400 transition">Cara Kerja</a>
+                <a href="#layanan" class="hover:text-lime-400 transition">Layanan</a>
+                <a href="#testimoni" class="hover:text-lime-400 transition">Testimoni</a>
+                <a href="#kontak" class="hover:text-lime-400 transition">Kontak</a>
+            </nav>
+            <a href="#kontak" class="hidden md:inline-block bg-lime-400 text-slate-900 px-6 py-2.5 rounded-full font-bold hover:bg-lime-300 transition shadow-lg shadow-lime-400/30">
+                Mulai Sekarang
+            </a>
+            <!-- Mobile menu toggle -->
+            <button id="menu-btn" class="md:hidden text-2xl text-white focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-white/10">
+            <nav class="flex flex-col items-center gap-4 py-4 font-medium text-gray-300">
+                <a href="#beranda" class="hover:text-lime-400">Beranda</a>
+                <a href="#fitur" class="hover:text-lime-400">Fitur</a>
+                <a href="#cara-kerja" class="hover:text-lime-400">Cara Kerja</a>
+                <a href="#layanan" class="hover:text-lime-400">Layanan</a>
+                <a href="#testimoni" class="hover:text-lime-400">Testimoni</a>
+                <a href="#kontak" class="hover:text-lime-400">Kontak</a>
+                <a href="#kontak" class="bg-lime-400 text-slate-900 px-6 py-2 rounded-full font-bold">Mulai Sekarang</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero-bg min-h-screen flex items-center justify-center px-4 pt-20">
+        <div class="max-w-5xl text-center">
+            <p class="text-lime-400 font-semibold text-lg mb-3 tracking-widest">🍔 FOOD TECH REVOLUTION</p>
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-white">
+                Nikmati Makanan Favoritmu<br><span class="gradient-text">Dimana Saja, Kapan Saja</span>
+            </h2>
+            <p class="text-lg md:text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
+                PT Teknologi Makan Dimana Saja menghadirkan platform digital terdepan untuk memesan makanan dari restoran terbaik di kotamu dengan cepat, mudah, dan aman.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#layanan" class="bg-lime-400 text-slate-900 px-8 py-3 rounded-full font-bold text-lg transition hover:bg-lime-300 shadow-xl shadow-lime-400/30">
+                    Pesan Sekarang
+                </a>
+                <a href="#fitur" class="bg-white/10 backdrop-blur px-8 py-3 rounded-full font-semibold text-lg transition border border-white/30 hover:bg-white/20">
+                    Lihat Fitur
+                </a>
+            </div>
+            <!-- Mockup App -->
+            <div class="mt-12 flex justify-center">
+                <div class="glass-card rounded-3xl p-4 max-w-xs w-full">
+                    <div class="bg-slate-800 rounded-2xl p-4">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-8 h-8 bg-lime-400 rounded-full flex items-center justify-center text-slate-900 font-bold">🍕</div>
+                            <div class="text-left">
+                                <p class="text-sm font-bold text-white">Pizza Express</p>
+                                <p class="text-xs text-gray-400">Sedang dalam perjalanan</p>
+                            </div>
+                        </div>
+                        <div class="h-24 bg-gradient-to-r from-purple-500 to-violet-600 rounded-xl flex items-center justify-center text-4xl">🛵</div>
+                        <div class="mt-3 flex justify-between text-xs text-gray-400">
+                            <span>Estimasi 15 menit</span>
+                            <span class="text-lime-400">★ 4.8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitur -->
+    <section id="fitur" class="py-20 bg-slate-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-lime-400 font-semibold mb-2">FITUR UNGGULAN</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Kenapa Memilih Kami?</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card rounded-2xl p-8 text-center transition hover:scale-105">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-600 to-violet-500 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-5 shadow-lg neon-glow">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Super Cepat</h3>
+                    <p class="text-gray-400">Pesanan sampai dalam 30 menit dengan sistem logistik cerdas dan kurir terlatih.</p>
+                </div>
+                <div class="glass-card rounded-2xl p-8 text-center transition hover:scale-105">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-600 to-violet-500 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-5 shadow-lg neon-glow">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Ribuan Restoran</h3>
+                    <p class="text-gray-400">Akses ke lebih dari 10.000 restoran dan merchant kuliner terbaik di seluruh Indonesia.</p>
+                </div>
+                <div class="glass-card rounded-2xl p-8 text-center transition hover:scale-105">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-600 to-violet-500 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-5 shadow-lg neon-glow">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Aman & Terpercaya</h3>
+                    <p class="text-gray-400">Transaksi aman dengan enkripsi data dan dukungan pelanggan 24/7.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cara Kerja -->
+    <section id="cara-kerja" class="py-20 bg-slate-950">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-lime-400 font-semibold mb-2">CARA KERJA</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white">3 Langkah Mudah</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-lime-400 to-green-500 rounded-full flex items-center justify-center text-slate-900 text-4xl font-bold mx-auto mb-5 shadow-lg shadow-lime-400/30">1</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Pilih Makanan</h3>
+                    <p class="text-gray-400">Buka aplikasi atau website, pilih restoran dan menu favoritmu.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-lime-400 to-green-500 rounded-full flex items-center justify-center text-slate-900 text-4xl font-bold mx-auto mb-5 shadow-lg shadow-lime-400/30">2</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Pesan & Bayar</h3>
+                    <p class="text-gray-400">Lakukan pembayaran dengan metode yang tersedia, e-wallet, transfer, atau COD.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gradient-to-br from-lime-400 to-green-500 rounded-full flex items-center justify-center text-slate-900 text-4xl font-bold mx-auto mb-5 shadow-lg shadow-lime-400/30">3</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Makanan Diantar</h3>
+                    <p class="text-gray-400">Kurir akan mengantarkan makanan langsung ke lokasimu, dimanapun kamu berada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan / Produk -->
+    <section id="layanan" class="py-20 bg-slate-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-lime-400 font-semibold mb-2">LAYANAN KAMI</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Solusi Makan Dimana Saja</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Layanan 1 -->
+                <div class="food-card glass-card rounded-2xl overflow-hidden transition hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Food Delivery" class="card-img w-full">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-white mb-2">Food Delivery</h3>
+                        <p class="text-gray-400 text-sm">Pesan makanan dari restoran favorit dan antar langsung ke lokasimu.</p>
+                    </div>
+                </div>
+                <!-- Layanan 2 -->
+                <div class="food-card glass-card rounded-2xl overflow-hidden transition hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Katering" class="card-img w-full">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-white mb-2">Katering Acara</h3>
+                        <p class="text-gray-400 text-sm">Layanan katering untuk acara kantor, pernikahan, atau pesta pribadi.</p>
+                    </div>
+                </div>
+                <!-- Layanan 3 -->
+                <div class="food-card glass-card rounded-2xl overflow-hidden transition hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                         alt="Groceries" class="card-img w-full">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-white mb-2">Belanja Bahan Makanan</h3>
+                        <p class="text-gray-400 text-sm">Belanja kebutuhan dapur dari supermarket dan pasar segar tanpa keluar rumah.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section id="testimoni" class="py-20 bg-slate-950">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-lime-400 font-semibold mb-2">TESTIMONI</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Kata Pengguna Kami</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fa-solid fa-quote-left text-3xl text-lime-400 mb-4"></i>
+                    <p class="text-gray-300 mb-6">"Aplikasinya sangat mudah digunakan. Pesan makanan tinggal beberapa klik, langsung sampai. Recommended!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <p class="font-semibold text-white">Ibu Sarah</p>
+                            <p class="text-sm text-gray-500">Mahasiswi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fa-solid fa-quote-left text-3xl text-lime-400 mb-4"></i>
+                    <p class="text-gray-300 mb-6">"Layanan katering untuk acara kantor kami sangat memuaskan. Makanan enak dan pengiriman tepat waktu."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <p class="font-semibold text-white">Bapak Andi</p>
+                            <p class="text-sm text-gray-500">Manager HRD</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fa-solid fa-quote-left text-3xl text-lime-400 mb-4"></i>
+                    <p class="text-gray-300 mb-6">"Belanja bahan makanan jadi lebih praktis. Kualitas barang bagus dan harganya bersaing."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="User" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <p class="font-semibold text-white">Ibu Dewi</p>
+                            <p class="text-sm text-gray-500">Ibu Rumah Tangga</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak / CTA -->
+    <section id="kontak" class="py-20 bg-slate-900">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12">
+            <div>
+                <p class="text-lime-400 font-semibold mb-2">HUBUNGI KAMI</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Mari Bergabung dengan Kami</h2>
+                <p class="text-gray-400 mb-8">Apakah Anda pemilik restoran yang ingin bergabung, atau pengguna yang butuh bantuan? Hubungi tim kami sekarang.</p>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-violet-500 rounded-full flex items-center justify-center text-white text-xl shadow-lg">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <p class="text-gray-300">Jl. Teknologi No. 1, Jakarta Selatan, Indonesia</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-violet-500 rounded-full flex items-center justify-center text-white text-xl shadow-lg">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <p class="text-gray-300">+62 21 5555 0000</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-violet-500 rounded-full flex items-center justify-center text-white text-xl shadow-lg">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <p class="text-gray-300">info@makandimanasaja.co.id</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <form class="glass-card p-8 rounded-2xl">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Nama Lengkap</label>
+                            <input type="text" placeholder="Nama Anda" class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-400">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                            <input type="email" placeholder="email@contoh.com" class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-400">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Subjek</label>
+                        <select class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-lime-400">
+                            <option>Pengguna Baru</option>
+                            <option>Kerja Sama Restoran</option>
+                            <option>Layanan Katering</option>
+                            <option>Bantuan / Komplain</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-300 mb-1">Pesan</label>
+                        <textarea rows="4" placeholder="Tulis pesan Anda..." class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-400"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-lime-400 text-slate-900 py-3 rounded-lg font-bold hover:bg-lime-300 transition shadow-lg shadow-lime-400/30">
+                        Kirim Pesan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-white py-10 border-t border-white/10">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-purple-600 to-violet-500 rounded-2xl flex items-center justify-center">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <span class="font-bold">PT TEKNOLOGI MAKAN DIMANA SAJA</span>
+            </div>
+            <p class="text-sm text-gray-500">© 2025 PT Teknologi Makan Dimana Saja. All rights reserved.</p>
+            <div class="flex gap-4">
+                <a href="#" class="text-gray-400 hover:text-lime-400 transition"><i class="fa-brands fa-facebook text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-lime-400 transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-lime-400 transition"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-lime-400 transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
